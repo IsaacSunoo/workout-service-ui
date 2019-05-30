@@ -1,4 +1,3 @@
----
 language: node_js
 node_js:
   - node
@@ -12,11 +11,3 @@ before_script:
 script:
   - npm ci
   - npx jest --ci
-jobs:
-  include:
-    - stage: deploy
-      node_js: lts/*
-      script:
-        - npm ci
-        - npx expo login -u justintorrance -p ComOnBebe15@
-        - npx expo publish --non-interactive
